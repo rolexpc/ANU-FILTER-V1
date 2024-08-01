@@ -20,8 +20,8 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1297128957').split()]
 USERNAME = environ.get('USERNAME', "https://telegram.me/ARAKAL_THERAVAD_MOVIES_02")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002010307613'))
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/ARAKAL_THERAVAD_GROUP_01')
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001234567898').split()]
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+GPIxN7G7iTo0OGJl')
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002199155681').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://pcmovies:pcmovies@cluster0.4vv9ebl.mongodb.net/?retryWrites=true&w=majority")
 
 DATABASE_NAME = environ.get('DATABASE_NAME', "pcmovies")
