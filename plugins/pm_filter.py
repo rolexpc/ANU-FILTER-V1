@@ -198,8 +198,8 @@ async def next_page(bot, query):
                 InlineKeyboardButton("ɴᴇxᴛ ⪼", callback_data=f"next_{req}_{key}_{n_offset}")
                 ],
             )
-            btn.append(
-                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
+         btn.append(
+                [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
 	    )	
     if settings["link"]:
         links = ""
