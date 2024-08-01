@@ -199,7 +199,7 @@ async def next_page(bot, query):
             ],
         )
 	btn.append(
-                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
+                [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
 	)
     if settings["link"]:
         links = ""
