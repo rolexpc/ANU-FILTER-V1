@@ -288,8 +288,7 @@ async def season_search(client: Client, query: CallbackQuery):
         btn = [[
                 InlineKeyboardButton(text=f"🔗 {get_size(file.file_size)}≽ {formate_file_name(file.file_name)}", callback_data=f'files#{reqnxt}#{file.file_id}'),]
                    for file in files
-              ]
-   
+	      ]   
     btn.insert(0,[
         InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ✨", callback_data=f"languages#{key}#{offset}#{req}"),
         ])
@@ -390,9 +389,7 @@ async def year_search(client: Client, query: CallbackQuery):
         btn = [[
                 InlineKeyboardButton(text=f"🔗 {get_size(file.file_size)}≽ {formate_file_name(file.file_name)}", callback_data=f'files#{reqnxt}#{file.file_id}'),]
                    for file in files
-              ]
-        
-   
+	      ]          
     btn.insert(0,[
         InlineKeyboardButton("✨ ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
         ])
@@ -492,9 +489,7 @@ async def quality_search(client: Client, query: CallbackQuery):
         btn = [[
                 InlineKeyboardButton(text=f"🔗 {get_size(file.file_size)}≽ {formate_file_name(file.file_name)}", callback_data=f'files#{reqnxt}#{file.file_id}'),]
                    for file in files
-              ]
-        
- 
+	      ]        
     btn.insert(0,[
         InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ✨", callback_data=f"languages#{key}#{offset}#{req}"),
         ])
@@ -598,9 +593,7 @@ async def lang_search(client: Client, query: CallbackQuery):
         btn = [[
                 InlineKeyboardButton(text=f"🔗 {get_size(file.file_size)}≽ {formate_file_name(file.file_name)}", callback_data=f'files#{reqnxt}#{file.file_id}'),]
                    for file in files
-              ]
-        
-
+	      ]        
     btn.insert(0,[
         InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ǫᴜᴀʟɪᴛʏ ✨", callback_data=f"qualities#{key}#{offset}#{req}"),
         ])
