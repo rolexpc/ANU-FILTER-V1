@@ -197,10 +197,7 @@ async def next_page(bot, query):
                 InlineKeyboardButton(f"{math.ceil(int(offset) / int(MAX_BTN)) + 1} / {math.ceil(total / int(MAX_BTN))}", callback_data="pages"),
                 InlineKeyboardButton("ɴᴇxᴛ ⪼", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
-        )
-	btn.append(
-                [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
-	)
+	)	
     if settings["link"]:
         links = ""
         for file_num, file in enumerate(files, start=offset+1):
