@@ -1268,10 +1268,7 @@ async def ai_spell_check(wrong_name):
         if files:
             return movie
         movie_list.remove(movie)
-    return
-    try:
-    except:
-        pass
+    return    
 async def auto_filter(client, msg, spoll=False , pm_mode = False):
     st = ''
     try:        
