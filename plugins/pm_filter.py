@@ -159,17 +159,19 @@ async def next_page(bot, query):
                 for file in files
               ]
     btn.insert(0,[
-        InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ✨", callback_data=f"languages#{key}#{offset}#{req}"),
+        InlineKeyboardButton("🔺𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒🔺", url=f"https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS"),
+        InlineKeyboardButton("🔺𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌🔺", url=f"https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=="),
         ])
     btn.insert(1, [
+        InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ✨", callback_data=f"languages#{key}#{offset}#{req}"),
         InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ 🤡", callback_data=f"qualities#{key}#{offset}#{req}"),
-        InlineKeyboardButton("🚩 ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
     ])
     btn.insert(2, [
-        InlineKeyboardButton("✨ ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
+        InlineKeyboardButton("✨ ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}"),
+	InlineKeyboardButton("🚩 ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
     ])
     btn.insert(3,[
-        InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+        InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
         ])
 
     if 0 < offset <= int(MAX_BTN):
@@ -196,6 +198,9 @@ async def next_page(bot, query):
                 InlineKeyboardButton("ɴᴇxᴛ ⪼", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
+	btn.append(
+                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
+	)
     if settings["link"]:
         links = ""
         for file_num, file in enumerate(files, start=offset+1):
@@ -297,12 +302,12 @@ async def season_search(client: Client, query: CallbackQuery):
         InlineKeyboardButton("🚩 ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
     ])
     btn.insert(2,[
-        InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+        InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
         ])
     
     if n_offset== '':
         btn.append(
-            [InlineKeyboardButton(text="🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", callback_data="buttons")]
+            [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
         )
     elif n_offset == 0:
         btn.append(
@@ -398,12 +403,12 @@ async def year_search(client: Client, query: CallbackQuery):
         InlineKeyboardButton("🎭 ʟᴀɴɢᴜᴀɢᴇ ✨", callback_data=f"languages#{key}#{offset}#{req}"),
     ])
     btn.insert(2,[
-        InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+        InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
         ])
     
     if n_offset== '':
         btn.append(
-            [InlineKeyboardButton(text="🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", callback_data="buttons")]
+            [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
         )
     elif n_offset == 0:
         btn.append(
@@ -498,11 +503,11 @@ async def quality_search(client: Client, query: CallbackQuery):
         InlineKeyboardButton("🚩 ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
     ])
     btn.insert(2, [
-        InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+        InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
     ])
     if n_offset== '':
         btn.append(
-            [InlineKeyboardButton(text="🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", callback_data="buttons")]
+            [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
         )
     elif n_offset == 0:
         btn.append(
@@ -602,11 +607,11 @@ async def lang_search(client: Client, query: CallbackQuery):
         InlineKeyboardButton("✨ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
     ])
     btn.insert(2, [
-        InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+        InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
     ])
     if n_offset== '':
         btn.append(
-            [InlineKeyboardButton(text="🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", callback_data="buttons")]
+            [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")]
         )
     elif n_offset == 0:
         btn.append(
@@ -1318,32 +1323,34 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
     if offset != "":
         if total_results >= MAX_BTN:
             btn.insert(0,[
-                InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ✨", callback_data=f"languages#{key}#{offset}#{req}"),
+                InlineKeyboardButton("🔺𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒🔺", url=f"https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS"),
+                InlineKeyboardButton("🔺𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌🔺", url=f"https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==")
                 ])
             btn.insert(1, [
+                InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ✨", callback_data=f"languages#{key}#{offset}#{req}"),
                 InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ 🤡", callback_data=f"qualities#{key}#{offset}#{req}"),
-                InlineKeyboardButton("🚩 ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
             ])
             btn.insert(2, [
-                InlineKeyboardButton("✨ ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
+                InlineKeyboardButton("✨ ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}"),
+	        InlineKeyboardButton("🚩 ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
             ])
             btn.insert(3,[
-                InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+                InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
                 ])
         else:
             btn.insert(0,[
-                InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+                InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
             ])
             btn.insert(1,[
-                InlineKeyboardButton("No More Pages", user_id=ADMINS[0])
+                InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")
             ])
     else:
         btn.insert(0,[
-            InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ", callback_data=batch_link),
+            InlineKeyboardButton("🔻𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒🔻", callback_data=batch_link),
             ])
 
         btn.insert(1,[
-            InlineKeyboardButton("No More Pages", user_id=ADMINS[0])
+            InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+un_DT-l-Td5iODc1")
         ])
                              
     if spoll:
