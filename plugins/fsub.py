@@ -104,7 +104,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
                 InlineKeyboardButton("📣 Rᴇᴏ̨ᴜᴇsᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ 📣", url=invite_link)
             ],
             [
-                InlineKeyboardButton("♻️ Tʀʏ Aɢᴀɪɴ ♻️", callback_data=f"{mode}#{file_id}")                
+                InlineKeyboardButton("♻️ Tʀʏ Aɢᴀɪɴ ♻️", callback_data=f"checksub#{file_id}#{int(grp_id)}")]                
             ]
         ]
 
