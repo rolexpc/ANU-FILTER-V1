@@ -725,10 +725,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)    
 
     elif query.data.startswith("checksub"):
-        if (REQ_CHANNEL or AUTH_CHANNEL) and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
-            return      
-        ident, file_id = query.data.split("#")
+        ident, file_id , grp_id = query.data.split("#")
+        if grp_id != 'None' or grp_id != '':
+            chat_id = grp_id
+        else:
+            chat_id = query.message.chat.id
+        if AUTH_CHANNEL and not await is_req_subscribed(client, query):
+            await query.answer("ɪ ʟɪᴋᴇ ʏᴏᴜʀ sᴍᴀʀᴛɴᴇss ʙᴜᴛ ᴅᴏɴ'ᴛ ʙᴇ ᴏᴠᴇʀsᴍᴀʀᴛ 😒\nꜰɪʀsᴛ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 😒", show_alert=True)
+            return         
         files_ = await get_file_details(file_id)
         if not files_:
             return await query.answer('ɴᴏ sᴜᴄʜ ꜰɪʟᴇ ᴇxɪsᴛs 🚫')
