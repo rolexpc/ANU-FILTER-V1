@@ -10,6 +10,8 @@ from shortzy import Shortzy
 from datetime import datetime
 from typing import Any
 from database.users_chats_db import db
+from database.join_reqs import JoinReqs as db2
+from database.join_reqs import JoinReqs
 
 
 logger = logging.getLogger(__name__)
