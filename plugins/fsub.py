@@ -96,27 +96,23 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
         else:
             return True
     except UserNotParticipant:
-        text="""**⚠️ ᴘʟᴇᴀsᴇ ғᴏʟʟᴏᴡ ᴛʜɪs ʀᴜʟᴇs ⚠️
-        
-    ആദ്യം ☛ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ ☚ എന്ന ബട്ടൺ ക്ലിക്ക് ചെയ്തു  ജോയിൻ റിക്വസ്റ്റ് ചെയ്.. എന്നിട്ട് വീണ്ടു ബോട്ടിൽ വന്നിട്ട് ☛ Tʀʏ ᴀɢᴀɪɴ ☚ എന്ന ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ ഫയൽ കിട്ടുന്നതായിരിക്കും
-        
-    Fɪʀsᴛ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ☛ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ ☚ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ. ᴛʜᴇɴ ᴄᴏᴍᴇ ʙᴀᴄᴋ ᴛᴏ ᴛʜᴇ ʙᴏᴛ ᴄʟɪᴄᴋ ᴏɴ ☛ Tʀʏ ᴀɢᴀɪɴ ☚ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇ...**"""
+        text="""**Please Join Bot users Channel to use this Bot!**"""
 
         buttons = [
             [
-                InlineKeyboardButton("📢 Request to Join Channel 📢", url=invite_link)
+                InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link)
             ],
             [
-                InlineKeyboardButton(" 🔄 Try Again 🔄 ", callback_data=f"{mode}#{file_id}")
+                InlineKeyboardButton("🔄 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🔄", callback_data=f"{mode}#{file_id}")
             ]
         ]
-        
+
         if file_id is False:
             buttons.pop()
 
         if not is_cb:
-            await update.reply_photo('https://telegra.ph/file/b74bd50e000c5d78dbd1a.jpg',
-                caption=text,
+            await update.reply(
+                text=text,
                 quote=True,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=enums.ParseMode.MARKDOWN,
