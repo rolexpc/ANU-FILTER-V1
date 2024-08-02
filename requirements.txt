@@ -17,6 +17,7 @@ colorama
 NumPy 
 wheel 
 ujson 
+fuzzywuzzy
 wget 
 pytz
 aiofiles
