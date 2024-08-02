@@ -105,8 +105,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
             ],
             [
                 InlineKeyboardButton("♻️ Tʀʏ Aɢᴀɪɴ ♻️", callback_data=f"checksub#{file_id}#{int(grp_id)}")]                
-            ]
-        ]
+        ]        
 
         if file_id is False:
             buttons.pop()
